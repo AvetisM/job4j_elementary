@@ -10,7 +10,7 @@ public class Greeting {
         System.out.println(idea);
 
         String separate = " ";
-        idea = idea + separate +"But I am a newbie.";
+        idea = idea + separate + "But I am a newbie.";
         int year = 2021;
         idea = idea + separate + year;
         System.out.println(idea);
