@@ -9,15 +9,11 @@ public class Machine {
         int size = 0;
         int coinChange = money - price;
 
-        while (coinChange > 0) {
-            for (int i = 0; i < coins.length;) {
-                if (coinChange >= coins[i]) { //если выполняется условие, то не увеличиваю индекс, чтобы монета осталась той же
-                    coinChange -= coins[i];
-                    rsl[size] = coins[i];
-                    size += 1;
-                } else {
-                    i += 1;
-                }
+        for (int coin : coins) {
+            while (coinChange >= coin) {
+                coinChange -= coin;
+                rsl[size] = coin;
+                size += 1;
             }
         }
         return Arrays.copyOf(rsl, size);
