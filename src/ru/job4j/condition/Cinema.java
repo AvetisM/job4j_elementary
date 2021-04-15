@@ -20,9 +20,7 @@ public class Cinema {
     }
 
     public static void main(String[] args) {
-
         access(18);
-
         permission(true, true);
         permission(true, false);
         permission(false, true);
